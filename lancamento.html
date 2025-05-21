@@ -7,42 +7,20 @@
 	<title>VALENN</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+		<link rel="stylesheet" href="estilo.css">
 </head>
 
-<body style="background-color: darkgray;
-background-repeat: no-repeat;
-background-attachment: fixed;
-background-size: 100% 100%;" style="opacity:1">
-	<nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-body" data-bs-theme="dark">
-		<!-- Navbar content -->
-		<div class="container-fluid">
-			<a class="navbar-brand" href="#">VALENN</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav">
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="PERSONA.html">Home</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="Produtos.html">Produtos</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="Conteudos.html">Conteúdos</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="lancamento.html">Lançamentos </a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="cadastro.html">Carrinho</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<h1>VALENN</h1>
-	</nav>
+<body>
+	<div id="menu"></div>
+	<script>
+		// Carregar o conteúdo do menu.html
+		fetch('menu.html')
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById('menu').innerHTML = data;
+			})
+			.catch(error => console.error('Erro ao carregar o menu:', error));
+	</script>
 	<br> </br>
 	<br> </br>
   <div style="display: flex; justify-content: center; align-items: center; height: 60vh;">
@@ -50,7 +28,7 @@ background-size: 100% 100%;" style="opacity:1">
 	  <img src="time.png" class="card-img-top" alt="time.png">
 	  <div class="card-body">
 		<h5 class="card-title">LANÇAMENTO TIMÃO</h5>
-		<p class="card-text">
+		<p>
 		  Chegou a nova blusa de time que vai conquistar o coração da torcida!
 		  Com design moderno, tecido confortável e qualidade que faz a diferença, essa peça é perfeita para mostrar sua paixão com estilo.
 		  Garanta já a sua e vista a camisa com orgulho!

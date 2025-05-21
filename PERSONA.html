@@ -13,38 +13,19 @@
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-size: 100% 100%;" style="opacity:1">
-	<nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-body" data-bs-theme="dark">
-		<!-- Navbar content -->
-		<div class="container-fluid">
-			<a class="navbar-brand" href="#">VALENN</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav">
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="PERSONA.html">Home</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="Produtos.html">Produtos</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="Conteudos.html">Conteúdos</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="lancamento.html">Lançamentos </a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="cadastro.html">Carrinho</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<h1>VALENN</h1>
-	</nav>
 
+	<div id="menu"></div>
+	<script>
+		// Carregar o conteúdo do menu.html
+		fetch('menu.html')
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById('menu').innerHTML = data;
+			})
+			.catch(error => console.error('Erro ao carregar o menu:', error));
+	</script>
 
+// carrosel
 	<div id="carouselExampleIndicators" class="carousel slide">
 		<div class="carousel-indicators">
 			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -54,6 +35,7 @@ background-size: 100% 100%;" style="opacity:1">
 			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
 				aria-label="Slide 3"></button>
 		</div>
+	
 		<div class="carousel-inner">
 			<div class="carousel-item active">
 				<img src="333.jpg" class="d-block w-100 alt=" 333.jpg">
@@ -76,6 +58,8 @@ background-size: 100% 100%;" style="opacity:1">
 			<span class="visually-hidden">Next</span>
 		</button>
 	</div>
+
+	//rodapé
 	<footer style="
   position: fixed;
   bottom: 0;
@@ -86,8 +70,8 @@ background-size: 100% 100%;" style="opacity:1">
   text-align: center;
   padding: 10px;
   z-index: 9999;">
-  VALENN — A Voz das Ruas, a Essência da Rebeldia
-</footer>
+		VALENN — A Voz das Ruas, a Essência da Rebeldia
+	</footer>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
