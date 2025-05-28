@@ -14,18 +14,34 @@ background-repeat: no-repeat;
 background-attachment: fixed;
 background-size: 100% 100%;" style="opacity:1">
 
-	<div id="menu"></div>
-	<script>
-		// Carregar o conteúdo do menu.html
-		fetch('menu.html')
-			.then(response => response.text())
-			.then(data => {
-				document.getElementById('menu').innerHTML = data;
-			})
-			.catch(error => console.error('Erro ao carregar o menu:', error));
-	</script>
+<div class="container-fluid">
+	<a class="navbar-brand" href="#">VALENN</a>
+	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+		aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarNav">
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="nav-link active" aria-current="page" href="PERSONA.html">Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="Produtos.html">Produtos</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="Conteudos.html">Conteúdos</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="lancamento.html">Lançamentos </a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="cadastro.html">Carrinho</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<h1>VALENN</h1>
 
-// carrosel
 	<div id="carouselExampleIndicators" class="carousel slide">
 		<div class="carousel-indicators">
 			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
