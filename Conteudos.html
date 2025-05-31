@@ -26,8 +26,16 @@ background-size: 100% 100%;" style="opacity:1">
 					<li class="nav-item">
 						<a class="nav-link active" aria-current="page" href="PERSONA.html">Home</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="Produtos.html">Produtos</a>
+					<li class="nav-item dropdown">
+					<li class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						Produtos
+					</li>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="blusas.html">Blusas</a></li>
+						<li><a class="dropdown-item" href="calças.html">Calças</a></li>
+						<li><a class="dropdown-item" href="moletom.html">Moletons</a></li>
+					</ul>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="Conteudos.html">Conteúdos</a>
@@ -141,6 +149,23 @@ background-size: 100% 100%;" style="opacity:1">
 			z-index: 9999;">
 		VALENN — A Voz das Ruas, a Essência da Rebeldia
 	</footer>
+
+	<body> <!-- Inicio do corpo da página -->
+
+		... <!-- Conteúdo da página -->
+
+		<div vw class="enabled">
+			<div vw-access-button class="active"></div>
+			<div vw-plugin-wrapper>
+				<div class="vw-plugin-top-wrapper"></div>
+			</div>
+		</div>
+		<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+		<script>
+			new window.VLibras.Widget('https://vlibras.gov.br/app');
+		</script>
+	</body> <!-- Fim do corpo da página -->
+
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
 		</script>

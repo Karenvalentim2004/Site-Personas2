@@ -11,7 +11,7 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">VALENN</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -23,8 +23,16 @@
 					<li class="nav-item">
 						<a class="nav-link active" aria-current="page" href="PERSONA.html">Home</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="Produtos.html">Produtos</a>
+					<li class="nav-item dropdown">
+					<li class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						Produtos
+					</li>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="blusas.html">Blusas</a></li>
+						<li><a class="dropdown-item" href="calças.html">Calças</a></li>
+						<li><a class="dropdown-item" href="moletom.html">Moletons</a></li>
+					</ul>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="Conteudos.html">Conteúdos</a>
@@ -108,7 +116,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 
 			<div class="col card mb-2" style="width: 540px; margin-left: 10px;">
 				<div class="row g-0">
@@ -339,7 +347,7 @@
 						</div>
 					</div>
 				</div>
-				
+
 			</div>
 
 		</div>
@@ -347,6 +355,22 @@
 	</div>
 
 	</div>
+
+	<body> <!-- Inicio do corpo da página -->
+
+		... <!-- Conteúdo da página -->
+
+		<div vw class="enabled">
+			<div vw-access-button class="active"></div>
+			<div vw-plugin-wrapper>
+				<div class="vw-plugin-top-wrapper"></div>
+			</div>
+		</div>
+		<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+		<script>
+			new window.VLibras.Widget('https://vlibras.gov.br/app');
+		</script>
+	</body> <!-- Fim do corpo da página -->
 
 	<footer style="
 			position: relative;
