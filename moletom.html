@@ -75,7 +75,7 @@
                     <p class="card-price"><strong>R$250,00</strong></p>
                 </div>
                 <div class="card-footer">
-                    <a href="carrinho.html" class="btn btn-primary">Adicionar ao carrinho</a>
+                   <button class="btn btn-primary" onclick="adicionarAoCarrinho('Moletom verde Cruz', 250.00, 'cruz.jpg')">Adicionar ao carrinho</button>
                 </div>
             </div>
         </div>
@@ -88,7 +88,7 @@
                     <p class="card-price"><strong>R$169,90</strong></p>
                 </div>
                 <div class="card-footer">
-                    <a href="carrinho.html" class="btn btn-primary">Adicionar ao carrinho</a>
+                    <button class="btn btn-primary" onclick="adicionarAoCarrinho('Moletom preto escrita japones', 169.90, 'japones.jpg')">Adicionar ao carrinho</button>
                 </div>
             </div>
         </div>
@@ -104,7 +104,7 @@
                     <p class="card-price"><strong>R$150,00</strong></p>
                 </div>
                 <div class="card-footer">
-                    <a href="carrinho.html" class="btn btn-primary">Adicionar ao carrinho</a>
+                    <button class="btn btn-primary" onclick="adicionarAoCarrinho('Moletom roxo', 150.00, 'moltroxo.jpg')">Adicionar ao carrinho</button>
                 </div>
             </div>
         </div>
@@ -117,7 +117,7 @@
                     <p class="card-price"><strong>R$99,90</strong></p>
                 </div>
                 <div class="card-footer">
-                    <a href="carrinho.html" class="btn btn-primary">Adicionar ao carrinho</a>
+                    <button class="btn btn-primary" onclick="adicionarAoCarrinho('Moletom Los Angeles', 99.90, 'moletomlos.jpg')">Adicionar ao carrinho</button>
                 </div>
             </div>
         </div>
@@ -130,7 +130,7 @@
                     <p class="card-price"><strong>R$130,00</strong></p>
                 </div>
                 <div class="card-footer">
-                    <a href="carrinho.html" class="btn btn-primary">Adicionar ao carrinho</a>
+                    <button class="btn btn-primary" onclick="adicionarAoCarrinho('Moletom Rick and Morty', 130.00, 'rick.jpg')">Adicionar ao carrinho</button>
                 </div>
             </div>
         </div>
@@ -146,7 +146,7 @@
                     <p class="card-price"><strong>R$200,00</strong></p>
                 </div>
                 <div class="card-footer">
-                    <a href="carrinho.html" class="btn btn-primary">Adicionar ao carrinho</a>
+                    <button class="btn btn-primary" onclick="adicionarAoCarrinho('Blusão em Moletom azul', 200.00, 'jaqueta1.jpg')">Adicionar ao carrinho</button>
                 </div>
             </div>
         </div>
@@ -159,7 +159,7 @@
                     <p class="card-price"><strong>R$260,00</strong></p>
                 </div>
                 <div class="card-footer">
-                    <a href="carrinho.html" class="btn btn-primary">Adicionar ao carrinho</a>
+                    <button class="btn btn-primary" onclick="adicionarAoCarrinho('Jaqueta preta', 260.00, 'jaqueta2.jpg')">Adicionar ao carrinho</button>
                 </div>
             </div>
         </div>
@@ -172,16 +172,32 @@
                     <p class="card-price"><strong>R$150,00</strong></p>
                 </div>
                 <div class="card-footer">
-                    <a href="carrinho.html" class="btn btn-primary">Adicionar ao carrinho</a>
+                    <button class="btn btn-primary" onclick="adicionarAoCarrinho('Blusão Comfort verde', 150.00, 'jaqueta3.jpg')">Adicionar ao carrinho</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Inicio do corpo da página -->
-
-    ... <!-- Conteúdo da página -->
-
+    <script>
+        function adicionarAoCarrinho(nome, preco, imagem) {
+            let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    
+            const index = carrinho.findIndex(item => item.nome === nome);
+    
+            if (index !== -1) {
+                // Se já existe, aumenta quantidade
+                carrinho[index].quantidade++;
+            } else {
+                // Se não existe, adiciona novo
+                carrinho.push({ nome: nome, preco: preco, imagem: imagem, quantidade: 1 });
+            }
+    
+            localStorage.setItem('carrinho', JSON.stringify(carrinho));
+    
+            alert('Produto adicionado ao carrinho!');
+        }
+    </script> 
+    
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -192,7 +208,6 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-    <!-- Fim do corpo da página -->
 
     <footer style="
 			position: relative;
