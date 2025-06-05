@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="utf-8">
@@ -7,26 +7,54 @@
     <title>VALENN</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <style>
+        .navbar {
+            background: linear-gradient(90deg, #2c3e50, #e0e0e0);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+            padding: 1rem 2rem;
+        }
+
+        .navbar-brand,
+        .nav-link {
+            font-weight: 700;
+            color: #e0e0e0 !important;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #070706 !important;
+        }
+
+        .col {
+            max-width: 300px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: whitesmoke;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            background-color: whitesmoke;
+        }
+
+        footer {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #000;
+            text-align: center;
+            padding: 10px;
+            z-index: 9999;
+        }
+    </style>
 </head>
-<style>
-    .navbar {
-        background: linear-gradient(90deg, #2c3e50, #e0e0e0);
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-        padding: 1rem 2rem;
-    }
-
-    .navbar-brand,
-    .nav-link {
-        font-weight: 700;
-        color: #e0e0e0 !important;
-        transition: color 0.3s ease;
-    }
-
-    .nav-link:hover,
-    .nav-link.active {
-        color: #070706 !important;
-    }
-</style>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Navegação principal">
@@ -38,182 +66,167 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="PERSONA.html">Home</a>
-                    </li>
-
+                    <li class="nav-item"><a class="nav-link active" href="PERSONA.html">Home</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="produtosDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Produtos
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="produtosDropdown">
+                            data-bs-toggle="dropdown">Produtos</a>
+                        <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="blusas.html">Blusas</a></li>
                             <li><a class="dropdown-item" href="calças.html">Calças</a></li>
                             <li><a class="dropdown-item" href="moletom.html">Moletons</a></li>
                         </ul>
                     </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="Conteudos.html">Conteúdos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="lancamento.html">Lançamentos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="carrinho.html">Carrinho</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="cadastro.html">Cadastro</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="Conteudos.html">Conteúdos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="lancamento.html">Lançamentos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="carrinho.html">Carrinho</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastro</a></li>
                 </ul>
             </div>
         </div>
         <div class="d-flex ms-auto">
             <img src="logo.png" alt="Logo" width="100" height="100" class="align-self-center">
-          </div>
+        </div>
     </nav>
 
-    <br> <br>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-            <div class="card h-70">
-                <img src="carpa.jpg" class="card-img-top" alt="carpa.jpg">
-                <div class="card-body">
-                    <h5 class="card-title">Moletom</h5>
-                    <p class="card-text">Moletom azul de carpa.</p>
-                    <p class="card-price"><strong>R$250,00</strong></p>
-                </div>
-                <div class="card-footer">
-                    <a href="carrinho.html" class="btn btn-primary">Adicionar ao carrinho</a>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-70">
-                <img src="cruz.jpg" class="card-img-top" alt="jcruz.jpg">
-                <div class="card-body">
-                    <h5 class="card-title">Moletom</h5>
-                    <p class="card-text">Moletom verde Cruz</p>
-                    <p class="card-price"><strong>R$250,00</strong></p>
-                </div>
-                <div class="card-footer">
-                    <button class="btn btn-primary"
-                        onclick="adicionarAoCarrinho('Moletom verde Cruz', 250.00, 'cruz.jpg')">Adicionar ao
-                        carrinho</button>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-70">
-                <img src="japones.jpg" class="card-img-top" alt="japones.jpg">
-                <div class="card-body">
-                    <h5 class="card-title">Moletom</h5>
-                    <p class="card-text">Moletom preto escrita japones.</p>
-                    <p class="card-price"><strong>R$169,90</strong></p>
-                </div>
-                <div class="card-footer">
-                    <button class="btn btn-primary"
-                        onclick="adicionarAoCarrinho('Moletom preto escrita japones', 169.90, 'japones.jpg')">Adicionar
-                        ao carrinho</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    <br><br>
 
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-            <div class="card h-70">
-                <img src="moltroxo.jpg" class="card-img-top" alt="moltroxo.jpg">
-                <div class="card-body">
-                    <h5 class="card-title">Moletom</h5>
-                    <p class="card-text">Moletom roxo.</p>
-                    <p class="card-price"><strong>R$150,00</strong></p>
-                </div>
-                <div class="card-footer">
-                    <button class="btn btn-primary"
-                        onclick="adicionarAoCarrinho('Moletom roxo', 150.00, 'moltroxo.jpg')">Adicionar ao
-                        carrinho</button>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-70">
-                <img src="moletomlos.jpg" class="card-img-top" alt="moletomlos.jpg">
-                <div class="card-body">
-                    <h5 class="card-title">Moletom</h5>
-                    <p class="card-text">Moletom Los Angeles</p>
-                    <p class="card-price"><strong>R$99,90</strong></p>
-                </div>
-                <div class="card-footer">
-                    <button class="btn btn-primary"
-                        onclick="adicionarAoCarrinho('Moletom Los Angeles', 99.90, 'moletomlos.jpg')">Adicionar ao
-                        carrinho</button>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-70">
-                <img src="rick.jpg" class="card-img-top" alt="rick.jpg">
-                <div class="card-body">
-                    <h5 class="card-title">Moletom</h5>
-                    <p class="card-text">Moletom Rick and Morty.</p>
-                    <p class="card-price"><strong>R$130,00</strong></p>
-                </div>
-                <div class="card-footer">
-                    <button class="btn btn-primary"
-                        onclick="adicionarAoCarrinho('Moletom Rick and Morty', 130.00, 'rick.jpg')">Adicionar ao
-                        carrinho</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
 
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-            <div class="card h-70">
-                <img src="jaqueta1.jpg" class="card-img-top" alt="jaqueta1.jpg">
-                <div class="card-body">
-                    <h5 class="card-title">Moletom</h5>
-                    <p class="card-text">Blusão em Moletom azul.</p>
-                    <p class="card-price"><strong>R$200,00</strong></p>
-                </div>
-                <div class="card-footer">
-                    <button class="btn btn-primary"
-                        onclick="adicionarAoCarrinho('Blusão em Moletom azul', 200.00, 'jaqueta1.jpg')">Adicionar ao
-                        carrinho</button>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-70">
-                <img src="jaqueta2.jpg" class="card-img-top" alt="jaqueta2.jpg">
-                <div class="card-body">
-                    <h5 class="card-title">Jaqueta</h5>
-                    <p class="card-text">Jaqueta preta.</p>
-                    <p class="card-price"><strong>R$260,00</strong></p>
-                </div>
-                <div class="card-footer">
-                    <button class="btn btn-primary"
-                        onclick="adicionarAoCarrinho('Jaqueta preta', 260.00, 'jaqueta2.jpg')">Adicionar ao
-                        carrinho</button>
+
+            <div class="col">
+                <div class="card h-100">
+                    <img src="carpa.jpg" class="card-img-top" alt="carpa.jpg">
+                    <div class="card-body">
+                        <h5 class="card-title">Moletom</h5>
+                        <p class="card-text">Moletom azul de carpa.</p>
+                        <p class="card-price"><strong>R$250,00</strong></p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="carrinho.html" class="btn btn-cinza">Adicionar ao carrinho</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col">
-            <div class="card h-70">
-                <img src="jaqueta3.jpg" class="card-img-top" alt="jaqueta3.jpg">
-                <div class="card-body">
-                    <h5 class="card-title">Moletom</h5>
-                    <p class="card-text">Blusão Comfort verde.</p>
-                    <p class="card-price"><strong>R$150,00</strong></p>
-                </div>
-                <div class="card-footer">
-                    <button class="btn btn-primary"
-                        onclick="adicionarAoCarrinho('Blusão Comfort verde', 150.00, 'jaqueta3.jpg')">Adicionar ao
-                        carrinho</button>
+
+
+            <div class="col">
+                <div class="card h-100">
+                    <img src="cruz.jpg" class="card-img-top" alt="cruz.jpg">
+                    <div class="card-body">
+                        <h5 class="card-title">Moletom</h5>
+                        <p class="card-text">Moletom verde Cruz</p>
+                        <p class="card-price"><strong>R$250,00</strong></p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary"
+                            onclick="adicionarAoCarrinho('Moletom verde Cruz', 250.00, 'cruz.jpg')">Adicionar ao
+                            carrinho</button>
+                    </div>
                 </div>
             </div>
+
+
+            <div class="col">
+                <div class="card h-100">
+                    <img src="japones.jpg" class="card-img-top" alt="japones.jpg">
+                    <div class="card-body">
+                        <h5 class="card-title">Moletom</h5>
+                        <p class="card-text">Moletom preto escrita japonês.</p>
+                        <p class="card-price"><strong>R$169,90</strong></p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary"
+                            onclick="adicionarAoCarrinho('Moletom preto escrita japonês', 169.90, 'japones.jpg')">Adicionar
+                            ao carrinho</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="card h-100">
+                    <img src="moltroxo.jpg" class="card-img-top" alt="moltroxo.jpg">
+                    <div class="card-body">
+                        <h5 class="card-title">Moletom</h5>
+                        <p class="card-text">Moletom roxo.</p>
+                        <p class="card-price"><strong>R$150,00</strong></p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary"
+                            onclick="adicionarAoCarrinho('Moletom roxo', 150.00, 'moltroxo.jpg')">Adicionar ao
+                            carrinho</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="card h-100">
+                    <img src="jaqueta3.jpg" class="card-img-top" alt="jaqueta3.jpg">
+                    <div class="card-body">
+                        <h5 class="card-title">Moletom</h5>
+                        <p class="card-text">Blusão Comfort verde.</p>
+                        <p class="card-price"><strong>R$150,00</strong></p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary"
+                            onclick="adicionarAoCarrinho('Blusão Comfort verde', 150.00, 'jaqueta3.jpg')">Adicionar ao
+                            carrinho</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="card h-100">
+                    <img src="rick.jpg" class="card-img-top" alt="rick.jpg">
+                    <div class="card-body">
+                        <h5 class="card-title">Moletom</h5>
+                        <p class="card-text">Moletom Rick and Morty.</p>
+                        <p class="card-price"><strong>R$130,00</strong></p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary"
+                            onclick="adicionarAoCarrinho('Moletom Rick and Morty', 130.00, 'rick.jpg')">Adicionar ao
+                            carrinho</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="card h-100">
+                    <img src="jaqueta1.jpg" class="card-img-top" alt="jaqueta1.jpg">
+                    <div class="card-body">
+                        <h5 class="card-title">Moletom</h5>
+                        <p class="card-text">Blusão em Moletom azul.</p>
+                        <p class="card-price"><strong>R$200,00</strong></p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary"
+                            onclick="adicionarAoCarrinho('Blusão em Moletom azul', 200.00, 'jaqueta1.jpg')">Adicionar ao
+                            carrinho</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="card h-100">
+                    <img src="jaqueta2.jpg" class="card-img-top" alt="jaqueta2.jpg">
+                    <div class="card-body">
+                        <h5 class="card-title">Jaqueta</h5>
+                        <p class="card-text">Jaqueta preta.</p>
+                        <p class="card-price"><strong>R$260,00</strong></p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary"
+                            onclick="adicionarAoCarrinho('Jaqueta preta', 260.00, 'jaqueta2.jpg')">Adicionar ao
+                            carrinho</button>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -224,10 +237,8 @@
             const index = carrinho.findIndex(item => item.nome === nome);
 
             if (index !== -1) {
-                // Se já existe, aumenta quantidade
                 carrinho[index].quantidade++;
             } else {
-                // Se não existe, adiciona novo
                 carrinho.push({ nome: nome, preco: preco, imagem: imagem, quantidade: 1 });
             }
 
@@ -244,27 +255,15 @@
         </div>
     </div>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
+    <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
 
-    <footer style="
-			position: relative;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			background-color: rgba(0, 0, 0, 0.5); /* cor com opacidade estilo bg-success */
-			color: #000;
-			text-align: center;
-			padding: 10px;
-			z-index: 9999;">
+    <footer>
         VALENN — A Voz das Ruas, a Essência da Rebeldia
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
-        </script>
-    <meta name="description"
-        content="Do you want people to click on your search result? Learn how to write the best meta description. Including 7 characteristics and examples!" />
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
