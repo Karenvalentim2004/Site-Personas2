@@ -11,15 +11,13 @@
   <link rel="stylesheet" href="styles.css" /> <!-- CSS externo -->
 
   <style>
-    /* Mantive temporariamente para exemplificar melhorias rápidas */
-
     body {
       background-image: url('imagem2.png');
       background-repeat: no-repeat;
       background-attachment: fixed;
-      background-size: cover; /* Melhor que 100% 100% */
+      background-size: cover;
       background-position: center center;
-      /* opacity: 1; removido pois não tem efeito */
+
     }
 
     .card {
@@ -43,7 +41,7 @@
     .card-title {
       font-size: 1rem;
       text-align: center;
-      text-transform: uppercase; /* Deixa o título mais estilizado */
+      text-transform: uppercase;
       font-weight: 600;
     }
 
@@ -60,8 +58,9 @@
       transition: background-color 0.3s ease;
     }
 
-    .btn:hover, .btn:focus {
-      background-color: #198754cc; /* Cor hover com transparência */
+    .btn:hover,
+    .btn:focus {
+      background-color: #198754cc;
       outline: none;
     }
 
@@ -88,6 +87,24 @@
       font-weight: 700;
       font-size: 2rem;
       color: #020303;
+    }
+
+    .navbar {
+      background: linear-gradient(90deg, #101011, #545b5c);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+      padding: 1rem 2rem;
+    }
+
+    .navbar-brand,
+    .nav-link {
+      font-weight: 700;
+      color: #e0e0e0 !important;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: #070706 !important;
     }
   </style>
 </head>
@@ -145,41 +162,11 @@
         </ul>
       </div>
     </div>
+    <div class="d-flex ms-auto">
+      <img src="logo.png" alt="Logo" width="100" height="100" class="align-self-center">
+    </div>
   </nav>
 
-  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" aria-label="Carrossel de imagens">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-        aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-        aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-        aria-label="Slide 3"></button>
-    </div>
-
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="333.png" class="d-block w-100" alt="Imagem de produto 333" />
-      </div>
-      <div class="carousel-item">
-        <img src="222.png" class="d-block w-100" alt="Imagem de produto 222" />
-      </div>
-      <div class="carousel-item">
-        <img src="111.png" class="d-block w-100" alt="Imagem de produto 111" />
-      </div>
-    </div>
-
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev"
-      aria-label="Anterior">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Anterior</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next"
-      aria-label="Próximo">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Próximo</span>
-    </button>
-  </div>
 
   <section class="section-title">
     <h1>NOSSOS PRODUTOS</h1>
@@ -228,7 +215,8 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
 
 </body>
 

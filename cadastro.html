@@ -1,148 +1,201 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cadastro VALENN</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
 </head>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">VALENN</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="PERSONA.html">Home</a>
-        </li>
-        <li class="nav-item dropdown">
-        <li class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Produtos
-        </li>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="blusas.html">Blusas</a></li>
-          <li><a class="dropdown-item" href="calças.html">Calças</a></li>
-          <li><a class="dropdown-item" href="moletom.html">Moletons</a></li>
+<style>
+  .navbar {
+    background: linear-gradient(90deg, #2c3e50, #545b5c);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    padding: 1rem 2rem;
+  }
+
+  .navbar-brand,
+  .nav-link {
+    font-weight: 700;
+    color: #e0e0e0 !important;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: #070706 !important;
+  }
+</style>
+
+<body style="background-color: whitesmoke;">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">VALENN</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="PERSONA.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Produtos
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="blusas.html">Blusas</a></li>
+              <li><a class="dropdown-item" href="calças.html">Calças</a></li>
+              <li><a class="dropdown-item" href="moletom.html">Moletons</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Conteudos.html">Conteúdos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="lancamento.html">Lançamentos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="carrinho.html">Carrinho</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cadastro.html">Cadastro</a>
+          </li>
         </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Conteudos.html">Conteúdos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="lancamento.html">Lançamentos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="carrinho.html">Carrinho</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="cadastro.html">Cadastro</a>
-        </li>
-      </ul>
+      </div>
+    </div>
+    <div class="d-flex ms-auto">
+      <img src="logo.png" alt="Logo" width="100" height="100" class="align-self-center">
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Cadastre-se</h1>
+    <h4>para finalizar a compra!</h4>
+
+    <form action="salvar.php" method="POST" enctype="multipart/form-data" class="row g-3 mt-3">
+
+      <div class="col-12">
+        <label for="estado" class="form-label">Qual Estado você mora?</label>
+        <select id="estado" name="estado" class="form-select" aria-label="Selecione o estado">
+          <option value="">Selecione</option>
+          <option value="Acre">Acre</option>
+          <option value="Alagoas">Alagoas</option>
+          <option value="Amapá">Amapá</option>
+          <option value="Amazonas">Amazonas</option>
+          <option value="Bahia">Bahia</option>
+          <option value="Ceará">Ceará</option>
+          <option value="Distrito Federal">Distrito Federal</option>
+          <option value="Espírito Santo">Espírito Santo</option>
+          <option value="Goiás">Goiás</option>
+          <option value="Maranhão">Maranhão</option>
+          <option value="Mato Grosso">Mato Grosso</option>
+          <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+          <option value="Minas Gerais">Minas Gerais</option>
+          <option value="Pará">Pará</option>
+          <option value="Paraíba">Paraíba</option>
+          <option value="Paraná">Paraná</option>
+          <option value="Pernambuco">Pernambuco</option>
+          <option value="Piauí">Piauí</option>
+          <option value="Rio de Janeiro">Rio de Janeiro</option>
+          <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+          <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+          <option value="Rondônia">Rondônia</option>
+          <option value="Roraima">Roraima</option>
+          <option value="Santa Catarina">Santa Catarina</option>
+          <option value="São Paulo">São Paulo</option>
+          <option value="Sergipe">Sergipe</option>
+          <option value="Tocantins">Tocantins</option>
+        </select>
+      </div>
+
+      <div class="col-md-6">
+        <label for="nome" class="form-label">Digite seu nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Nome" class="form-control" required />
+      </div>
+
+      <div class="col-md-6">
+        <label for="data_nascimento" class="form-label">Data de nascimento:</label>
+        <input type="date" id="data_nascimento" name="data_nascimento" class="form-control" required />
+      </div>
+
+      <div class="col-md-6">
+        <label for="telefone" class="form-label">Digite seu telefone:</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="Telefone" class="form-control" required />
+      </div>
+
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Email</label>
+        <input type="email" class="form-control" id="inputEmail4" name="email" required />
+      </div>
+
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Crie uma senha</label>
+        <input type="password" class="form-control" id="inputPassword4" name="senha" required />
+      </div>
+
+      <div class="col-12">
+        <label for="inputAddress" class="form-label">Endereço</label>
+        <input type="text" class="form-control" id="inputAddress" name="endereco" placeholder="Rua..." required />
+      </div>
+
+      <div class="col-md-6">
+        <label for="inputBairro" class="form-label">Bairro</label>
+        <input type="text" class="form-control" id="inputBairro" name="bairro" required />
+      </div>
+
+      <div class="col-md-6">
+        <label for="inputCidade" class="form-label">Cidade</label>
+        <input type="text" class="form-control" id="inputCidade" name="cidade" required />
+      </div>
+
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck" name="confirmacao" required />
+          <label class="form-check-label" for="gridCheck">
+            Está tudo correto
+          </label>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Enviar informações</button>
+      </div>
+
+    </form>
+  </div>
+  <br> </br>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
     </div>
   </div>
-  <h1>VALENN</h1>
-</nav>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
 
-<body>
-  <h1>Cadastre-se</h1>
-  <h4>para finalizar a compra!</h4>
-  <form action="salvar.php" method="POST" enctype="multipart/form-data"></form>
-  <br> </br>
-  <label for="estado">Qual Estado você mora?:</label>
-  <select id="estado" name="estado" class="form-select" aria-label="Default select example">
-    <option value="1">Selecione</option>
-    <option value="2">Acre</option>
-    <option value="3">Alagoas</option>
-    <option value="4">Amapá</option>
-    <option value="5">Amazonas</option>
-    <option value="6">Bahia</option>
-    <option value="7">Ceará</option>
-    <option value="8">Distrito Federal</option>
-    <option value="9">Espírito Santo</option>
-    <option value="10">Goiás</option>
-    <option value="11">Maranhão</option>
-    <option value="12">Mato Grosso</option>
-    <option value="13">Mato Grosso do Sul</option>
-    <option value="14">Minas Gerais</option>
-    <option value="15">Pará</option>
-    <option value="16">Paraíba</option>
-    <option value="17">Paraná</option>
-    <option value="18">Pernambuco</option>
-    <option value="19">Piauí</option>
-    <option value="20">Rio de Janeiro</option>
-    <option value="21">Rio Grande do Norte</option>
-    <option value="22">Rio Grande do Sul</option>
-    <option value="23">Rondônia </option>
-    <option value="24">Roraima</option>
-    <option value="25">Santa Catarina</option>
-    <option value="26">São Paulo</option>
-    <option value="27">Sergipe</option>
-    <option value="28">Tocantins</option>
-  </select>
-  <label for="nome">Digite seu nome:</label>
-  <input type="text" placeholder="Nome" id="nome" class="form-control">
-  <label for="data_atendimento">Data de nascimento:</label>
-  <input type="date" placeholder="Data de nascimento" id="data_de nascimento" class="form-control">
-  <label for="telefone">Digite seu telefone:</label>
-  <input type="tel" placeholder="Telefone" id="telefone" class="form-control">
+  <footer style="
+position: relative;
+bottom: 0;
+left: 0;
+width: 100%;
+background-color: rgba(0, 0, 0, 0.5); /* cor com opacidade estilo bg-success */
+color: #000;
+text-align: center;
+padding: 10px;
+z-index: 9999;">
+    VALENN — A Voz das Ruas, a Essência da Rebeldia
+  </footer>
 
-  <form class="row g-3">
-    <div class="col-md-6">
-      <label for="inputEmail4" class="form-label">Email</label>
-      <input type="email" class="form-control" id="inputEmail4">
-    </div>
-    <div class="col-md-6">
-      <label for="inputPassword4" class="form-label">Crie uma senha</label>
-      <input type="password" class="form-control" id="inputPassword4">
-    </div>
-    <div class="col-12">
-      <label for="inputAddress" class="form-label">Endereço</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="Rua...">
-    </div>
-    <div class="col-md-6">
-      <label for="inputCity" class="form-label">Bairro</label>
-      <input type="text" class="form-control" id="inputCity">
-    </div>
-    <div class="col-md-6">
-      <label for="inputCity" class="form-label">Cidade</label>
-      <input type="text" class="form-control" id="inputCity">
-    </div>
-    <div class="col-12">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="gridCheck">
-        <label class="form-check-label" for="gridCheck">
-          Está tudo correto
-        </label>
-      </div>
-    </div>
-    <div class="col-12">
-      <button type="submit" class="btn btn-primary">Enviar informações</button>
-    </div>
-  </form>
-
-  <body> <!-- Inicio do corpo da página -->
-
-    ... <!-- Conteúdo da página -->
-
-    <div vw class="enabled">
-      <div vw-access-button class="active"></div>
-      <div vw-plugin-wrapper>
-        <div class="vw-plugin-top-wrapper"></div>
-      </div>
-    </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-      new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
-  </body> <!-- Fim do corpo da página -->
-
-  <meta name="description"
-    content="Do you want people to click on your search result? Learn how to write the best meta description. Including 7 characteristics and examples!" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

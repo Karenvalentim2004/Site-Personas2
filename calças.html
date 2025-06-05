@@ -8,13 +8,32 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 </head>
+<style>
+    .navbar {
+        background: linear-gradient(90deg, #2c3e50, #e0e0e0);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+        padding: 1rem 2rem;
+    }
+
+    .navbar-brand,
+    .nav-link {
+        font-weight: 700;
+        color: #e0e0e0 !important;
+        transition: color 0.3s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        color: #070706 !important;
+    }
+</style>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Navegação principal">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">VALENN</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -22,17 +41,19 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="PERSONA.html">Home</a>
                     </li>
+
                     <li class="nav-item dropdown">
-                    <li class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Produtos
+                        <a class="nav-link dropdown-toggle" href="#" id="produtosDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Produtos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="produtosDropdown">
+                            <li><a class="dropdown-item" href="blusas.html">Blusas</a></li>
+                            <li><a class="dropdown-item" href="calças.html">Calças</a></li>
+                            <li><a class="dropdown-item" href="moletom.html">Moletons</a></li>
+                        </ul>
                     </li>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="blusas.html">Blusas</a></li>
-                        <li><a class="dropdown-item" href="calças.html">Calças</a></li>
-                        <li><a class="dropdown-item" href="moletom.html">Moletons</a></li>
-                    </ul>
-                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="Conteudos.html">Conteúdos</a>
                     </li>
@@ -48,7 +69,9 @@
                 </ul>
             </div>
         </div>
-        <h1>VALENN</h1>
+        <div class="d-flex ms-auto">
+            <img src="logo.png" alt="Logo" width="100" height="100" class="align-self-center">
+          </div>
     </nav>
 
     <br> <br>
@@ -63,8 +86,9 @@
                     <p class="card-price"><strong>R$100,00</strong></p>
                 </div>
                 <div class="card-footer">
-                    <button class="btn btn-primary"onclick="adicionarAoCarrinho('Calça Baggy em Jeans com Recortes e Bolso', 100, 'calça3.jpg')">
-                    > Adicionar ao carrinho </button>
+                    <button class="btn btn-primary"
+                        onclick="adicionarAoCarrinho('Calça Baggy em Jeans com Recortes e Bolso', 100, 'calça3.jpg')">
+                        > Adicionar ao carrinho </button>
                 </div>
             </div>
         </div>
@@ -77,7 +101,9 @@
                     <p class="card-price"><strong>R$120,00</strong></p>
                 </div>
                 <div class="card-footer">
-                    <button class="btn btn-primary" onclick="adicionarAoCarrinho ('Calça Jeans Baggy com Bolsos Cargo Cinza', 120, 'calça1.jpg')">Adicionar ao carrinho </button>
+                    <button class="btn btn-primary"
+                        onclick="adicionarAoCarrinho ('Calça Jeans Baggy com Bolsos Cargo Cinza', 120, 'calça1.jpg')">Adicionar
+                        ao carrinho </button>
                 </div>
             </div>
         </div>
@@ -90,7 +116,9 @@
                     <p class="card-price"><strong>R$200,00</strong></p>
                 </div>
                 <div class="card-footer">
-                    <button class="btn btn-primary" onclick="adicionarAoCarrinho('Calça Skater em Jeans com Bolsos Cargo Preto', 200,'calça2.jpg')">Adicionar ao carrinho </button>
+                    <button class="btn btn-primary"
+                        onclick="adicionarAoCarrinho('Calça Skater em Jeans com Bolsos Cargo Preto', 200,'calça2.jpg')">Adicionar
+                        ao carrinho </button>
                 </div>
             </div>
         </div>
@@ -98,22 +126,22 @@
     <script>
         function adicionarAoCarrinho(nome, preco, imagem) {
             let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-    
+
             const index = carrinho.findIndex(item => item.nome === nome);
-    
+
             if (index !== -1) {
-                // Se já existe, aumenta quantidade
+
                 carrinho[index].quantidade++;
             } else {
-                // Se não existe, adiciona novo
+
                 carrinho.push({ nome: nome, preco: preco, imagem: imagem, quantidade: 1 });
             }
-    
+
             localStorage.setItem('carrinho', JSON.stringify(carrinho));
-    
+
             alert('Produto adicionado ao carrinho!');
         }
-    </script>    
+    </script>
 
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
