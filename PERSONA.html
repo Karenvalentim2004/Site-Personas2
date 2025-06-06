@@ -8,7 +8,7 @@
   <meta name="description" content="VALENN — A Voz das Ruas, a Essência da Rebeldia" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
-  <link rel="stylesheet" href="styles.css" /> <!-- CSS externo -->
+  <link rel="stylesheet" href="styles.css" />
 
   <style>
     body {
@@ -64,18 +64,6 @@
       outline: none;
     }
 
-    footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background-color: rgba(25, 135, 84, 0.8);
-      color: #000;
-      text-align: center;
-      padding: 10px;
-      z-index: 9999;
-      font-weight: 500;
-    }
 
     .section-title {
       display: flex;
@@ -210,9 +198,19 @@
     </div>
   </main>
 
-  <footer>
+  <footer style="
+position: relative;
+bottom: 0;
+left: 0;
+width: 100%;
+background-color: rgba(0, 0, 0, 0.5); /* cor com opacidade estilo bg-success */
+color: #000;
+text-align: center;
+padding: 10px;
+z-index: 9999;">
     VALENN — A Voz das Ruas, a Essência da Rebeldia
   </footer>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
